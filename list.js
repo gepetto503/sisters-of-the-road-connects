@@ -132,12 +132,12 @@ var displayEventsResources = function(arr) {
     var listings = $(".list ul");
     listings.empty();
     for (var i = 0; i < arr.length; i++){
-        var obj = arr[i]; 
+        var obj = arr[i];
         var type = obj.category
         var name = obj.name
         var details = obj.description
         var date = obj.createTime
-        var image = 'img/++'
+        var image = 'img/'+type+'.png';
         var resource = '<li><img src='+image+' width="75" height="70" alt=""><p>Type: '+type+'<br>Name: '+name+'<br>Details: '+details+'<br>Date submitted: '+date+'</p></li><hr>'
         listings.append(resource);
     }
@@ -162,14 +162,14 @@ var createGeoJsonFeature = function(obj) {
 var search = function() {
     var bathrooms = [
         {
-            "category":"bathroom", 
+            "category":"bathroom",
             "name": "Public Bathroom in Overlook Park.",
             "description":"Clean bathroom for public use. Open from 6am-9pm.",
             "coords":[-122.678734, 45.516962],
             "createTime":"12-01-2017"
         },
         {
-            "category":"bathroom", 
+            "category":"bathroom",
             "name": "Public Bathroom in Overlook Park.",
             "description":"Clean bathroom for public use. Open from 6am-9pm.",
             "coords":[-122.678734, 45.516962],
@@ -210,7 +210,7 @@ $('.add-listing-form').submit(function(e) {
     var location = $inputs[3].value;
 
     resources.push({
-        "category": category, 
+        "category": category,
         "name": name,
         "description": description,
         "coords":[-122.672525, 45.509209],
@@ -224,4 +224,3 @@ $('.add-listing-form').submit(function(e) {
 
 // display all resources in list on load
 displayEventsResources(resources)
-

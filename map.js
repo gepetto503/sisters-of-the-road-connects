@@ -151,11 +151,11 @@ var CustomIcon = L.Icon.extend({
   }
 });
 var toiletIcon = new CustomIcon({iconUrl: 'img/blue-toilet.png'})
-var showerIcon = new CustomIcon({iconUrl: 'img/bathtub.png'})
-var sweepIcon = new CustomIcon({iconUrl: 'img/sweep-alert.png'})
+var showerIcon = new CustomIcon({iconUrl: 'img/bathroom.png'})
+var sweepIcon = new CustomIcon({iconUrl: 'img/sweep.png'})
 var shelterIcon = new CustomIcon({iconUrl: 'img/shelter.png'})
-var campsiteIcon = new CustomIcon({iconUrl: 'img/camping.png'})
-var chargeStationIcon = new CustomIcon({iconUrl: 'img/mobile-charging.png'})
+var campsiteIcon = new CustomIcon({iconUrl: 'img/campsite.png'})
+var chargeStationIcon = new CustomIcon({iconUrl: 'img/charging.png'})
 
 // PLACE NEW MARKER ON MAP
 $('#add-marker').on('click', function(event) {
