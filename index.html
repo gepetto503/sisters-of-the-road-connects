@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="MichelleJL">
+  
+  <title>We Code For Good: Sister's of the Road Connects</title>
+
+  <!-- Reset styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-reboot.min.css.map" />
+  
+  <!-- Leaflet Links -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+  integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+  integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+  crossorigin=""></script>
+
+  <!-- FontAwesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- jQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- map view container -->
+  <div class="map-view-container">
+    <i class="fa fa-bars fa-3x" aria-hidden="true" onclick=hideMapView()></i>
+
+    <!-- MAP -->
+    <div id="mapid"></div>
+
+  </div>
+  <!-- map view container -->
+
+  <!-- list view container -->
+  <div class="list-view-container">
+    
+    <!-- map-list view toggle -->
+    <i class="fa fa-map-marker fa-3x" aria-hidden="true" onclick=hideListView()></i>
+    <!-- map-list view toggle -->
+    
+    <!-- search -->
+    <div class="search-list">
+        <input placeholder="Search for listing">
+        <button>
+            <span class="fa fa-search" onclick=search()></span>
+        </button>
+    </div><br>
+    <!-- search -->
+    
+    <!-- resource list view list -->
+    <div class="list">
+        <ul>
+            <hr>
+        </ul>
+    </div>
+    <!-- resource list view list -->
+    
+      <br>
+      <button class="add-listing" onclick="showform()">Add a Listing</button>
+      <br>
+      <form class="add-listing-form">
+          Category:
+          <select name="category">
+            <option value="bathroom">Bathroom</option>
+            <option value="shower">Shower</option>
+            <option value="sweep">Sweep</option>
+            <option value="shelter">Shelter</option>
+            <option value="campsite">Campsite</option>
+            <option value="phone">Phone Charge Site</option>
+          </select>
+        <br>Name:
+        <input type="text" name="Name of listing">
+        <br>Description:
+        <input type="text" name="Description of listing">
+        <br>Location:
+        <input type="text" name="">
+        <br><button type="submit" onclick=submitListing()>Submit New Listing</button>
+      </form>
+  </div>
+  <!-- list view container -->
+
+  <!-- FORM VIEW CONTAINER -->
+  <form>
+    <h2>Add New Resource Location</h2>
+    Location Name:
+    <input type="text" name="name" id="name">
+
+    <br />
+    Category:
+    <select name="category">
+      <option value="bathroom">Bathroom</option>
+      <option value="shower">Shower</option>
+      <option value="sweep">Sweep</option>
+      <option value="shelter">Shelter</option>
+      <option value="campsite">Campsite</option>
+      <option value="phone">Phone Charge Site</option>
+    </select>
+
+    <br /> 
+    Location: 
+    <span class="small">(Click on map to auto-populate)</span><br />
+    Lat: <input type="text" name="lat" id="lat"><br />
+    Long: <input type="text" name="long" id="long">
+    
+    <br />
+    <input type="submit" value="Submit" id="add-marker">
+  </form>
+  <!-- FORM VIEW CONTAINER -->
+
+  <script src="map.js"></script>
+  <script src="list.js"></script>
+</body>
+</html>

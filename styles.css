@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+#mapid {
+  height: 50vh;
+  width: 100vw; }
+
+ul {
+  list-style-type: none; }
+
+.fa-map-marker, .fa-bars {
+  float: right; }
+
+.add-listing-form {
+  display: none; }
+
+.list-view-container {
+  display: none; }
+
+/*# sourceMappingURL=styles.css.map */
