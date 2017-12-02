@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>We Code For Good: Sister's of the Road Connects</title>
+  <meta name="description" content="We Code for Good">
+  <link rel="stylesheet" href="list.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- map view container -->
+    <div class="map-view-container">
+        <i class="fa fa-bars fa-3x" aria-hidden="true" onclick=hideMapView()></i>
+    </div>
+<!-- map view container -->
+
+
+<!-- list view container -->
+    <div class="list-view-container">
+
+        <!-- map-list view toggle -->
+        <i class="fa fa-map-marker fa-3x" aria-hidden="true" onclick=hideListView()></i>
+        <!-- map-list view toggle -->
+
+        <!-- search -->
+        <div class="search-list">
+            <input placeholder="Search for listing">
+            <button>
+                <span class="fa fa-search" onclick=search()></span>
+            </button>
+        </div><br>
+        <!-- search -->
+
+        <!-- resource list view list -->
+        <div class="list">
+            <ul>
+                <hr>
+            </ul>
+        </div>
+        <!-- resource list view list -->
+
+        <br>
+        <button class="add-listing" onclick="showform()">Add a Listing</button>
+        <br>
+        <form class="add-listing-form">
+            Category:
+            <select name="category">
+              <option value="bathroom">Bathroom</option>
+              <option value="shower">Shower</option>
+              <option value="sweep">Sweep</option>
+              <option value="shelter">Shelter</option>
+              <option value="campsite">Campsite</option>
+              <option value="phone">Phone Charge Site</option>
+            </select>
+          <br>Name:
+          <input type="text" name="Name of listing">
+          <br>Description:
+          <input type="text" name="Description of listing">
+          <br>Location:
+          <input type="text" name="">
+          <br><button type="submit" onclick=submitListing()>Submit New Listing</button>
+        </form>
+    </div>
+<!-- list view container -->
+
+    <script src="list.js"></script>
+</body>
+</html>

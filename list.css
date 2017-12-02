@@ -1,0 +1,15 @@
+ul {
+  list-style-type: none;
+}
+
+.fa-map-marker, .fa-bars {
+    float: right;
+}
+
+.add-listing-form {
+    display: none;
+}
+
+.list-view-container {
+    display: none;
+}
