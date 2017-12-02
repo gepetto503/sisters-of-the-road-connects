@@ -23,6 +23,10 @@ var CustomIcon = L.Icon.extend({
 });
 var toiletIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
 var showerIcon = new CustomIcon({iconUrl: 'img/shower.png'})
+var sweepIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
+var shelterIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
+var campsiteIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
+var chargeStationIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
 
 // PLACE NEW MARKER ON MAP
 $('#add-marker').on('click', function(event) {
@@ -41,13 +45,15 @@ $('#add-marker').on('click', function(event) {
 
 function createPopup() {
   var locName = $('#name').val();
+  var desc = $('#description').val();
   var info = '';
-  info += '<strong>' + locName + '</strong>';
+  info += '<strong>' + locName + '</strong><br />';
+  info += desc;
   return info;
 }
 
 function getIconType() {
-  var icon= $("input[name='category']:checked").val();
+  var icon= $("select[name='category'] :selected").val();
   console.log(icon)
   switch (icon) {
     case 'bathroom':
@@ -55,6 +61,18 @@ function getIconType() {
       break;
     case 'shower':
       icon = showerIcon;
+      break;
+    case 'sweep':
+      icon = sweepIcon;
+      break;
+    case 'shelter':
+      icon = shelterIcon;
+      break;
+    case 'campsite':
+      icon = campsiteIcon;
+      break;
+    case 'charging':
+      icon = chargeStationIcon;
       break;
   }
   return icon;
