@@ -84,42 +84,42 @@ var resources = [
       "createTime":"12-01-2017"
   },
   {
-      "category":"camping",
+      "category":"campsite",
       "name": "Hazelnut Grove Camping",
       "description":"Sanctioned urban camping with bathroom and storage for valuables.",
       "coords":[-122.679203, 45.545638],
       "createTime":"12-01-2017"
   },
   {
-      "category":"camping",
+      "category":"campsite",
       "name": "Sidewalk Camping",
       "description":"Sidewalk space near hawthorne bridge with several spaces available for tents.",
       "coords":[-122.666347, 45.512753],
       "createTime":"12-01-2017"
   },
   {
-      "category":"camping",
+      "category":"campsite",
       "name": "Sidewalk Camping",
       "description":"Large sidewalk with several spaces available for tents.",
       "coords":[-122.656500, 45.513986],
       "createTime":"12-01-2017"
   },
   {
-      "category":"camping",
+      "category":"campsite",
       "name": "Sidewalk Camping",
       "description":"Large sidewalk with several spaces available for tents.",
       "coords":[-122.679561, 45.528081],
       "createTime":"12-01-2017"
   },
   {
-      "category":"camping",
+      "category":"campsite",
       "name": "Safe Camping Near River",
       "description":"Sanctioned urban camping near the river with several spaces available for tents.",
       "coords":[-122.667326, 45.529290],
       "createTime":"12-01-2017"
   },
   {
-      "category":"phone",
+      "category":"charging",
       "name": "Phone Charge Site",
       "description":"Public outlet station for charging devices.",
       "coords":[-122.654260, 45.518000],
@@ -137,7 +137,8 @@ var displayEventsResources = function(arr) {
         var name = obj.name
         var details = obj.description
         var date = obj.createTime
-        var resource = '<li><img src="mockmap1.png" width="75" height="70" alt=""><p>Type: '+type+'<br>Name: '+name+'<br>Details: '+details+'<br>Date submitted: '+date+'</p></li><hr>'
+        var image = 'img/++'
+        var resource = '<li><img src='+image+' width="75" height="70" alt=""><p>Type: '+type+'<br>Name: '+name+'<br>Details: '+details+'<br>Date submitted: '+date+'</p></li><hr>'
         listings.append(resource);
     }
 }
