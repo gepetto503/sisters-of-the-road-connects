@@ -45,4 +45,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Women Who Code
 
 ## Attributions
- * Icons made by Freepik from www.flaticon.com
+ * Camping icon made by Freepik from www.flaticon.com
+ * Mobile charging icon made by Freepik from www.flaticon.com
+ * Shelter icon made by Freepik from www.flaticon.com
+ * Shower icon made by Freepik from www.flaticon.com
+ * Sweep icon made by Freepik from www.flaticon.com
+ * Bathtub icon made by Baianat from www.flaticon.com
+ * Toilet icon made by Freepik from www.flaticon.com

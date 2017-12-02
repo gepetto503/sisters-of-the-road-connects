@@ -150,8 +150,8 @@ var CustomIcon = L.Icon.extend({
     popupAnchor:  [-(iconSize/2), -iconSize]
   }
 });
-var toiletIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
-var showerIcon = new CustomIcon({iconUrl: 'img/shower.png'})
+var toiletIcon = new CustomIcon({iconUrl: 'img/blue-toilet.png'})
+var showerIcon = new CustomIcon({iconUrl: 'img/bathtub.png'})
 var sweepIcon = new CustomIcon({iconUrl: 'img/sweep-alert.png'})
 var shelterIcon = new CustomIcon({iconUrl: 'img/shelter.png'})
 var campsiteIcon = new CustomIcon({iconUrl: 'img/camping.png'})

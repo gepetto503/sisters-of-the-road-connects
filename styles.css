@@ -9,7 +9,7 @@ body {
 ul {
   list-style-type: none; }
 
-.fa-map-marker, .fa-bars {
+.fa-map-marker, .fa-bars, .fa-list {
   float: right; }
 
 .add-listing-form {
