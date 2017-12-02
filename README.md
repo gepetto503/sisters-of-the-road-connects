@@ -3,16 +3,21 @@ A native iOS app for connecting the houseless community with resources.
 
 ## We Code 2017 - Team 12
 ### Members:
-* **Brendan** - [github](https://github.com/gepetto503)
-* **Michelle** - [github](https://github.com/michellejl)
-* **Heather** - [github](http://github.com/heatherbuletti)
-* **Jessica** - [github](https://github.com/jessicagreben)
-* **Katie** - [github](https://github.com/KatSaldivar)
+* [Brendan](https://github.com/gepetto503)
+* [Michelle](https://github.com/michellejl)
+* [Heather](http://github.com/heatherbuletti)
+* [Jessica](https://github.com/jessicagreben)
+* [Katie](https://github.com/KatSaldivar)
 
 ## Contribute
 
+If you would like to contribute see [Issues](https://github.com/gepetto503/sisters-of-the-road-connects/issues) for current feature and bug requests.
+
+To get set up locally to contribute:
 1. git clone `git@github.com:gepetto503/sisters-of-the-road-connects.git`
-2. 
+2. create a feature branch
+3. make code changes
+4. git add and git commit and submit a pull request
 
 ## Running the tests
 
