@@ -88,24 +88,7 @@
 
     <!-- <button class="add-listing button" onclick="showform()">Add a Listing</button>
     <br> -->
-    <form class="add-listing-form">
-        Category:
-        <select name="category">
-          <option value="bathroom">Bathroom</option>
-          <option value="shower">Shower</option>
-          <option value="sweep">Sweep</option>
-          <option value="shelter">Shelter</option>
-          <option value="campsite">Campsite</option>
-          <option value="phone">Phone Charge Site</option>
-        </select>
-      <br>Name:
-      <input type="text" name="Name of listing">
-      <br>Description:
-      <input type="text" name="Description of listing">
-      <br>Location:
-      <input type="text" name="">
-      <br><button type="submit" onclick=submitListing()>Submit New Listing</button>
-    </form>
+    
   </div>
   <!-- list view container -->
       <!-- <br>
@@ -113,12 +96,16 @@
 
 
   <!-- FORM VIEW CONTAINER -->
-  <form id="new-resource-form">
+  <form id="new-resource-form" class="add-listing-form">
     <h2>Add New Resource Location</h2>
     <div class="inputs">
       <div class="input-field">
         <input type="text" name="name" id="name" placeholder="Portable Showers">
         <label for="name">Location Name</label>
+      </div>
+      <div class="input-field">
+        <input type="text" name="description" id="description" placeholder="Portable showers that are free to use.">
+        <label for="name">Description</label>
       </div>
 
       <div class="input-field">
@@ -128,7 +115,7 @@
           <option value="sweep">Sweep</option>
           <option value="shelter">Shelter</option>
           <option value="campsite">Campsite</option>
-          <option value="phone">Phone Charge Site</option>
+          <option value="charging">Charging Site</option>
         </select>
         <label>Categories</label>
       </div>
