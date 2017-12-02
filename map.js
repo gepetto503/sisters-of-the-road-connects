@@ -10,7 +10,7 @@ var resources = [
       "category":"sweep",
       "name": "Burnside Bridge Camp Sweep",
       "description":"20 campers losing their tents and belongings, resources needed for these individuals.",
-      "coords":[-122.670879, 45.523765],
+      "coords":[-122.670879, 45.49999],
       "createTime":"12-01-2017"
   },
   {
@@ -66,7 +66,7 @@ var resources = [
       "category":"shower",
       "name": "Public Shower",
       "description":"Mobile shower unit with free showers on Saturdays.",
-      "coords":[-122.671156, 45.523333],
+      "coords":[-122.671156, 45.573333],
       "createTime":"12-01-2017"
   },
   {
@@ -141,7 +141,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/michellejl/cjapnyfhz54t92srsbcmaxl
 
 
 // CREATING ICONS
-var iconSize = 35;
+var iconSize = 25;
 
 var CustomIcon = L.Icon.extend({
   options: {
