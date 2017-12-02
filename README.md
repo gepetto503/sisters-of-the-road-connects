@@ -1,21 +1,22 @@
 # Sisters of the Road Connects
-A native iOS app for connecting the houseless community with resources, created at We Code 2017.
+A native iOS app for connecting the houseless community with resources.
 
-## Getting Started
+## We Code 2017 - Team 12
+### Members:
+* **Brendan** - [github](https://github.com/gepetto503)
+* **Michelle** - [github](https://github.com/michellejl)
+* **Heather** - [github](http://github.com/heatherbuletti)
+* **Jessica** - [github](https://github.com/jessicagreben)
+* **Katie** - [github](https://github.com/KatSaldivar)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Contribute
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+1. git clone `git@github.com:gepetto503/sisters-of-the-road-connects.git`
+2. 
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+WIP
 
 ## Deployment
 
@@ -24,26 +25,24 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Leaflet](http://leaflet.js/) - Map framework
-* [iOS Webworks]() - 
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Authors
-
-* **Brendan** - [github](https://github.com/gepetto503)
-* **Hannah** - [github](https://github.com/)
-* **Heather** - [github](https://github.com/)
-* **Jessica** - [github](https://github.com/jessicagreben)
-* **Katie** - [github](https://github.com/)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* [iOS WK Webkit](https://developer.apple.com/documentation/webkit/wkwebview)
 
 ## Acknowledgments
 
 * Puppet
 * Nike
 * Women Who Code
+
+## Attributions
+ * Camping icon made by Freepik from www.flaticon.com
+ * Mobile charging icon made by Freepik from www.flaticon.com
+ * Shelter icon made by Freepik from www.flaticon.com
+ * Shower icon made by Freepik from www.flaticon.com
+ * Sweep icon made by Freepik from www.flaticon.com
+ * Bathtub icon made by Baianat from www.flaticon.com
+ * Toilet icon made by Freepik from www.flaticon.com
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
