@@ -130,6 +130,7 @@ var resources = [
 // CREATE MAP
 var lat = 45.5148906
 var long = -122.6760716
+var markers = []
 
 var mymap = L.map('mapid').setView([lat, long], 13);
 L.tileLayer('https://api.mapbox.com/styles/v1/michellejl/cjapnyfhz54t92srsbcmaxlpv/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
@@ -167,6 +168,7 @@ $('#add-marker').on('click', function(event) {
   var marker = L.marker([lat,long], {icon: iconType})
   marker.addTo(mymap);
 
+  markers.push(marker)
   popupText = createPopup();
   marker.bindPopup(popupText);
 
@@ -183,19 +185,24 @@ $('#add-marker').on('click', function(event) {
 })
 
 function addResourceMarkers (arr) {
-  for (var i = 0; i < arr.length; i++){
-    var obj = arr[i];
+    for (var i = 0; i < arr.length; i++){
+        addIndividualMarker(arr[i])
+    }
+};
+
+function addIndividualMarker(item) {
+    var obj = item;
     var lat = obj.coords[1];
     var long = obj.coords[0];
     var iconType = getIconType(obj.category);
-
+    
     var marker = L.marker([lat,long], {icon: iconType});
-
+    
     marker.addTo(mymap);
+    markers.push(marker)
     var popupText = '<strong>' + obj.name + '</strong><br/>' + obj.description;
     marker.bindPopup(popupText);
-    }
-};
+}
 
 addResourceMarkers(resources);
 
@@ -234,6 +241,24 @@ function getIconType(type) {
       icon = chargeStationIcon;
   }
   return icon;
+}
+
+var showSweepSite = function() {
+    for (var i = 0; i < markers.length; i++){
+        mymap.removeLayer(markers[i])
+    }
+    $('.list-view-container').hide();
+    $('.map-view-container').show();
+    
+    var sweepSite =  {
+        "category":"sweep",
+        "name": "Burnside Bridge Camp Sweep",
+        "description":"20 campers losing their tents and belongings, resources needed for these individuals.",
+        "coords":[-122.670879, 45.523765],
+        "createTime":"12-01-2017"
+    };
+    addIndividualMarker(sweepSite)
+    displayEventsResources([sweepSite])
 }
 
 
