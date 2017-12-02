@@ -16,17 +16,17 @@ var iconSize = 35;
 
 var CustomIcon = L.Icon.extend({
   options: {
-    iconSize:     [iconSize, iconSize], 
-    iconAnchor:   [iconSize, iconSize], 
-    popupAnchor:  [-(iconSize/2), -iconSize] 
+    iconSize:     [iconSize, iconSize],
+    iconAnchor:   [iconSize, iconSize],
+    popupAnchor:  [-(iconSize/2), -iconSize]
   }
 });
 var toiletIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
 var showerIcon = new CustomIcon({iconUrl: 'img/shower.png'})
-var sweepIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
-var shelterIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
-var campsiteIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
-var chargeStationIcon = new CustomIcon({iconUrl: 'img/toilet.png'})
+var sweepIcon = new CustomIcon({iconUrl: 'img/sweep-alert.png'})
+var shelterIcon = new CustomIcon({iconUrl: 'img/shelter.png'})
+var campsiteIcon = new CustomIcon({iconUrl: 'img/camping.png'})
+var chargeStationIcon = new CustomIcon({iconUrl: 'img/mobile-charging.png'})
 
 // PLACE NEW MARKER ON MAP
 $('#add-marker').on('click', function(event) {
