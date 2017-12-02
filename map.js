@@ -161,7 +161,7 @@ var chargeStationIcon = new CustomIcon({iconUrl: 'img/charging.png'})
 // PLACE NEW MARKER ON MAP
 $('#add-marker').on('click', function(event) {
   event.preventDefault();
-
+  $("html, body").animate({ scrollTop: 0 }, "slow");
   iconType = getIconType();
   lat = $('#lat').val();
   long = $('#long').val();

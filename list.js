@@ -197,9 +197,6 @@ var showform = function() {
     $('html, body').scrollTop( $(document).height() );
 };
 
-var submitListing = function() {
-
-};
 
 $('.add-listing-form').submit(function(e) {
     var $inputs = $('.add-listing-form :input');
@@ -218,7 +215,6 @@ $('.add-listing-form').submit(function(e) {
     })
     displayEventsResources(resources);
     $('.add-listing-form').empty();
-    $('html, body').scrollTop( $(document).height() );
     return false;
 });
 
