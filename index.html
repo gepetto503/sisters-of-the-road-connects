@@ -6,12 +6,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="MichelleJL">
-  
+
   <title>We Code For Good: Sister's of the Road Connects</title>
 
   <!-- Reset styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-reboot.min.css.map" />
-  
+
+  <!-- Materialize -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
   <!-- Leaflet Links -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
@@ -37,8 +40,21 @@
 
   <!-- map view container -->
   <div class="map-view-container">
-    <i class="fa fa-bars fa-3x" aria-hidden="true" onclick=hideMapView()></i>
 
+    <!-- topbar -->
+    <div class="topbar">
+      <!-- search -->
+      <div class="search-list">
+          <input placeholder="Search for listing">
+          <button>
+              <span class="fa fa-search" onclick=search()></span>
+          </button>
+      </div><br>
+      <!-- search -->
+      <i class="fa fa-list fa-3x" aria-hidden="true" onclick=hideMapView()></i>
+    </div>
+
+    <!-- /topbar -->
     <!-- MAP -->
     <div id="mapid"></div>
 
@@ -47,20 +63,21 @@
 
   <!-- list view container -->
   <div class="list-view-container">
-    
-    <!-- map-list view toggle -->
-    <i class="fa fa-map-marker fa-3x" aria-hidden="true" onclick=hideListView()></i>
-    <!-- map-list view toggle -->
-    
-    <!-- search -->
-    <div class="search-list">
-        <input placeholder="Search for listing">
-        <button>
-            <span class="fa fa-search" onclick=search()></span>
-        </button>
-    </div><br>
-    <!-- search -->
-    
+    <!-- topbar -->
+    <div class="topbar">
+      <!-- search -->
+      <div class="search-list">
+          <input placeholder="Search for listing">
+          <button>
+              <span class="fa fa-search" onclick=search()></span>
+          </button>
+      </div><br>
+      <!-- search -->
+      <!-- map-list view toggle -->
+      <i class="fa fa-map-marker fa-3x" aria-hidden="true" onclick=hideListView()></i>
+      <!-- map-list view toggle -->
+    </div>
+    <!--/topbar-->
     <!-- resource list view list -->
     <div class="list">
         <ul>
@@ -68,60 +85,74 @@
         </ul>
     </div>
     <!-- resource list view list -->
-    
-      <br>
-      <button class="add-listing" onclick="showform()">Add a Listing</button>
-      <br>
-      <form class="add-listing-form">
-          Category:
-          <select name="category">
-            <option value="bathroom">Bathroom</option>
-            <option value="shower">Shower</option>
-            <option value="sweep">Sweep</option>
-            <option value="shelter">Shelter</option>
-            <option value="campsite">Campsite</option>
-            <option value="phone">Phone Charge Site</option>
-          </select>
-        <br>Name:
-        <input type="text" name="Name of listing">
-        <br>Description:
-        <input type="text" name="Description of listing">
-        <br>Location:
-        <input type="text" name="">
-        <br><button type="submit" onclick=submitListing()>Submit New Listing</button>
-      </form>
+
+    <button class="add-listing button" onclick="showform()">Add a Listing</button>
+    <br>
+    <form class="add-listing-form">
+        Category:
+        <select name="category">
+          <option value="bathroom">Bathroom</option>
+          <option value="shower">Shower</option>
+          <option value="sweep">Sweep</option>
+          <option value="shelter">Shelter</option>
+          <option value="campsite">Campsite</option>
+          <option value="phone">Phone Charge Site</option>
+        </select>
+      <br>Name:
+      <input type="text" name="Name of listing">
+      <br>Description:
+      <input type="text" name="Description of listing">
+      <br>Location:
+      <input type="text" name="">
+      <br><button type="submit" onclick=submitListing()>Submit New Listing</button>
+    </form>
   </div>
   <!-- list view container -->
 
   <!-- FORM VIEW CONTAINER -->
-  <form>
+  <form id="new-resource-form">
     <h2>Add New Resource Location</h2>
-    Location Name:
-    <input type="text" name="name" id="name">
+    <div class="inputs">
+      <div class="input-field">
+        <input type="text" name="name" id="name" placeholder="Portable Showers">
+        <label for="name">Location Name</label>
+      </div>
 
-    <br />
-    Category:
-    <select name="category">
-      <option value="bathroom">Bathroom</option>
-      <option value="shower">Shower</option>
-      <option value="sweep">Sweep</option>
-      <option value="shelter">Shelter</option>
-      <option value="campsite">Campsite</option>
-      <option value="phone">Phone Charge Site</option>
-    </select>
+      <div class="input-field">
+        <select name="category">
+          <option value="bathroom">Bathroom</option>
+          <option value="shower">Shower</option>
+          <option value="sweep">Sweep</option>
+          <option value="shelter">Shelter</option>
+          <option value="campsite">Campsite</option>
+          <option value="phone">Phone Charge Site</option>
+        </select>
+        <label>Categories</label>
+      </div>
 
-    <br /> 
-    Location: 
-    <span class="small">(Click on map to auto-populate)</span><br />
-    Lat: <input type="text" name="lat" id="lat"><br />
-    Long: <input type="text" name="long" id="long">
-    
-    <br />
-    <input type="submit" value="Submit" id="add-marker">
+
+      <!-- Location: -->
+      <!-- <span class="small">(Click on map to auto-populate)</span><br /> -->
+      <p>(Click on map to autopopulate location)</p>
+      <div class="input-field">
+        <input type="text" name="lat" id="lat"><br />
+        <label>Latitude</label>
+      </div>
+      <div class="input-field">
+        <input type="text" name="long" id="long">
+        <label>Longitude</label>
+      </div>
+
+      <br />
+    </div>
+    <input type="submit" value="Submit" id="add-marker" class="button">
   </form>
   <!-- FORM VIEW CONTAINER -->
 
+  <!-- Materialize scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="map.js"></script>
   <script src="list.js"></script>
+  <script src="form.js"></script>
 </body>
 </html>
