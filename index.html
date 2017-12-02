@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="MichelleJL">
-  
+
   <title>We Code For Good: Sister's of the Road Connects</title>
 
   <!-- Reset styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-reboot.min.css.map" />
-  
+
   <!-- Leaflet Links -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
@@ -37,7 +37,7 @@
 
   <!-- map view container -->
   <div class="map-view-container">
-    <i class="fa fa-bars fa-3x" aria-hidden="true" onclick=hideMapView()></i>
+    <i class="fa fa-list fa-3x" aria-hidden="true" onclick=hideMapView()></i>
 
     <!-- MAP -->
     <div id="mapid"></div>
@@ -47,11 +47,11 @@
 
   <!-- list view container -->
   <div class="list-view-container">
-    
+
     <!-- map-list view toggle -->
     <i class="fa fa-map-marker fa-3x" aria-hidden="true" onclick=hideListView()></i>
     <!-- map-list view toggle -->
-    
+
     <!-- search -->
     <div class="search-list">
         <input placeholder="Search for listing">
@@ -60,7 +60,7 @@
         </button>
     </div><br>
     <!-- search -->
-    
+
     <!-- resource list view list -->
     <div class="list">
         <ul>
@@ -69,7 +69,7 @@
     </div>
     <!-- resource list view list -->
   </div>
-  <!-- list view container -->  
+  <!-- list view container -->
       <br>
       <button class="add-listing" onclick="showform()">Add a Listing</button>
 
@@ -95,12 +95,12 @@
       <option value="charging">Charging Site</option>
     </select>
 
-    <br /> 
-    Location: 
+    <br />
+    Location:
     <span class="small">(Click on map to auto-populate)</span><br />
     Lat: <input type="text" name="lat" id="lat"><br />
     Long: <input type="text" name="long" id="long">
-    
+
     <br />
     <input type="submit" value="Submit" id="add-marker">
   </form>
